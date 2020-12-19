@@ -91,6 +91,9 @@ Resources:
             chmod +x /usr/local/bin/docker-compose
             yum install git -y
             yum install java-11-amazon-corretto -y
+<<<<<<< HEAD
+            git clone https://github.com/rmzturkmen/petclinic-microservices.git
+=======
             git clone https://github.com/clarusway/petclinic-microservices.git
             cd petclinic-microservices
             git fetch
@@ -201,6 +204,7 @@ Resources:
             yum install git -y
             yum install java-11-amazon-corretto -y
             git clone https://github.com/clarusway/petclinic-microservices.git
+>>>>>>> feature/msp-5
             cd petclinic-microservices
             git fetch
             git checkout dev
