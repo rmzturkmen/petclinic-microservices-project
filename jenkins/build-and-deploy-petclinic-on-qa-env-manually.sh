@@ -1,13 +1,13 @@
 PATH="$PATH:/usr/local/bin"
 APP_NAME="petclinic"
 APP_REPO_NAME="clarusway-repo/petclinic-app-qa"
-APP_STACK_NAME="Matt-petclinic-App-QA-4"
+APP_STACK_NAME="Matt-petclinic-App-QA-6"
 CFN_KEYPAIR="rmzturkmen-petclinic-qa.key"
 AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
 AWS_REGION="us-east-1"
 ECR_REGISTRY="${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com"
 export ANSIBLE_PRIVATE_KEY_FILE="${JENKINS_HOME}/.ssh/${CFN_KEYPAIR}"
-export ANSIBLE_HOST_KEY_CHECKING="False"
+export ANSIBLE_HOST_KEY_CHECKING="False
 echo 'Packaging the App into Jars with Maven'
 . ./jenkins/package-with-maven-container.sh
 echo 'Preparing QA Tags for Docker Images'
